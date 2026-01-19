@@ -1,0 +1,8 @@
+[build]
+  # Static HTML site - copy files to public directory
+  command = "mkdir -p public && cp -r *.html *.css *.js *.png public/ 2>/dev/null || true"
+  publish = "public"
+
+[build.environment]
+  # Skip the Next.js plugin since this is a static HTML site, not a Next.js app
+  NETLIFY_NEXT_PLUGIN_SKIP = "true"
